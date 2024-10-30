@@ -21,9 +21,9 @@ use libc;
 use optee_teec_sys as raw;
 use std::ptr;
 
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 use crate::OwnedSession;
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 use std::sync::Arc;
 
 /// An abstraction of the logical connection between a client application and a
@@ -96,7 +96,7 @@ impl Context {
         )
     }
 
-    #[cfg(feature = "owned")]
+    #[cfg(feature = "owned_session")]
     /// Opens a new owned session with the specified trusted application.
     ///
     /// The target trusted application is specified by `uuid`.
@@ -139,7 +139,7 @@ impl Context {
         Session::new(self, uuid, Some(operation))
     }
 
-    #[cfg(feature = "owned")]
+    #[cfg(feature = "owned_session")]
     /// Opens a new owned session with the specified trusted application, pass some
     /// parameters to TA by an operation.
     ///

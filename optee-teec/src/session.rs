@@ -17,9 +17,9 @@
 
 use libc;
 use optee_teec_sys as raw;
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 use self_cell::self_cell;
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 use std::sync::Arc;
 use std::ptr;
 use std::marker;
@@ -49,7 +49,7 @@ pub enum ConnectionMethods {
 // sessions with 'static lifetime should be Send.
 //
 // A few ways to construct a session with static lifetime:
-// 1. With the "owned" feature, use an `OwnedSession`
+// 1. With the "owned_session" feature, use an `OwnedSession`
 // 2. Use `once_cell::sync::Lazy` or `lazy_static` or anything similar to produce a global context
 // 3. Use `Box::leak` or similar to permanently consume heap resources by creating a &'static
 //    Context
@@ -61,7 +61,7 @@ pub struct Session<'ctx> {
     _marker: marker::PhantomData<&'ctx Context>,
 }
 
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 self_cell! {
     struct SessionPair {
         owner: Arc<Context>,
@@ -71,10 +71,10 @@ self_cell! {
 }
 
 /// Represents an owned variant of `Session`, whose Context is reference counted.
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 pub struct OwnedSession(SessionPair);
 
-#[cfg(feature = "owned")]
+#[cfg(feature = "owned_session")]
 impl OwnedSession {
     /// Initializes an owned TEE session object with specified context and uuid.
     pub fn new<A: Param, B: Param, C: Param, D: Param>(
