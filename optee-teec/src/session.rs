@@ -90,6 +90,10 @@ impl OwnedSession {
         self.0.borrow_dependent()
     }
 
+    /// Call given closure func with an unique mutable reference to an unowned session, borrowed from the owned version
+    pub fn with_session_mut<R>(&mut self, func: impl for <'_q> FnOnce(&'_q Arc<Context>, &mut Session<'_q>) -> R) -> R {
+        self.0.with_dependent_mut(func)
+    }
 }
 
 impl<'ctx> Session<'ctx> {
