@@ -24,17 +24,31 @@ If you are looking for a guide on how to compile this project, please refer to t
 
 ### 2. 示例应用程序 (Example Applications)
 - `hello_world-rs`: Hello World 示例
+- `acipher-rs`: 非对称加密示例
 - `aes-rs`: AES 加密示例
+- `authentication-rs`: 认证示例
+- `big_int-rs`: 大整数运算示例
+- `build_with_optee_utee_sys-rs`: 使用 optee-utee-sys 的示例
+- `client_pool-rs`: 客户端连接池示例 (包含连接管理器)
 - `diffie_hellman-rs`: Diffie-Hellman 密钥交换示例
 - `digest-rs`: 哈希摘要示例
+- `error_handling-rs`: 错误处理示例
 - `hotp-rs`: HOTP 认证示例
+- `inter_ta-rs`: TA 间通信示例
+- `message_passing_interface-rs`: MPI 示例
+- `mnist-rs`: 机器学习推理示例
+- `property-rs`: 属性处理示例
 - `random-rs`: 随机数生成示例
+- `secure_db_abstraction-rs`: 安全数据库抽象示例
 - `secure_storage-rs`: 安全存储示例
+- `serde-rs`: 序列化/反序列化示例
+- `signature_verification-rs`: 数字签名验证示例
+- `supp_plugin-rs`: Supplicant 插件示例
+- `tcp_client-rs`: TCP 客户端示例
+- `time-rs`: 时间操作示例
 - `tls_client-rs`: TLS 客户端示例
 - `tls_server-rs`: TLS 服务器示例
-- `tcp_client-rs`: TCP 客户端示例
-- `client_pool-rs`: 客户端连接池示例 (包含连接管理器)
-- 以及更多示例,请查看 `examples/` 目录
+- `udp_socket-rs`: UDP 套接字示例
 
 ### 3. 项目 (Projects)
 - `web3`: Web3 相关项目

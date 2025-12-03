@@ -27,6 +27,7 @@ The project includes:
 - `acipher-rs`: Asymmetric cipher example
 - `authentication-rs`: Authentication example
 - `big_int-rs`: Big integer operations
+- `build_with_optee_utee_sys-rs`: Example using optee-utee-sys
 - `client_pool-rs`: Client connection pool (includes connection managers)
 - `diffie_hellman-rs`: Diffie-Hellman key exchange
 - `digest-rs`: Hash digest example
