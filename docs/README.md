@@ -7,6 +7,8 @@ permalink: /trustzone-sdk-docs
 ## Quick Start
 * [Quick Emulation And Development in Docker](emulate-and-dev-in-docker.md)
 * [Developing TAs with Rust Standard Library in Docker](emulate-and-dev-in-docker-std.md)
+* [编译指南 (Compilation Guide - Chinese)](compilation-guide-zh.md)
+* [Frequently Asked Questions (FAQ)](faq.md)
 
 ## Development
 * [TA Development Modes](ta-development-modes.md)

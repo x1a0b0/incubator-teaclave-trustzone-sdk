@@ -38,6 +38,7 @@ efficiently, without the hassle of manual configuration.
 **Choose your development mode in Emulator:**
 - 🚀 [Quick Emulation And Development in Docker](docs/emulate-and-dev-in-docker.md) 
 - 🚀 [Developing TAs with Rust Standard Library](docs/emulate-and-dev-in-docker-std.md)
+- 📖 [编译指南 (Compilation Guide - Chinese)](docs/compilation-guide-zh.md)
 
 ## Advanced Setup: Customize Your Build Environment
 
